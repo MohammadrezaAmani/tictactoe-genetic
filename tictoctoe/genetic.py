@@ -21,7 +21,14 @@ class GeneticAlgorithm:
 
     def __init__(
         self,
-    ):
+        population: int = 50,
+        generations: int = 50,
+        mutation_rate: float = 0.1,
+    ) -> None:
+        self.population = population
+        self.generations = generations
+        self.mutation_rate = mutation_rate
+
         self.winning_combinations = [
             (0, 1, 2),
             (3, 4, 5),
@@ -33,7 +40,7 @@ class GeneticAlgorithm:
             (2, 4, 6),
         ]
 
-    def initialize_population(self, population_size: int) -> List[List[int]]:
+    def initialize_population(self) -> List[List[int]]:
         """
         Initializes the population of chromosomes.
 
@@ -44,7 +51,7 @@ class GeneticAlgorithm:
             List[List[int]]: The initialized population of chromosomes.
         """
         return [
-            [random.choice(range(9)) for _ in range(9)] for _ in range(population_size)
+            [random.choice(range(9)) for _ in range(9)] for _ in range(self.population)
         ]
 
     def evaluate_fitness(self, chromosome: List[int], current_board: List[int]) -> int:
@@ -126,9 +133,7 @@ class GeneticAlgorithm:
             return 1
         return 0
 
-    def genetic_algorithm(
-        self, population_size: int, generations: int, current_board: List[int]
-    ) -> int:
+    def genetic_algorithm(self, current_board: List[int]) -> int:
         """
         Runs the genetic algorithm to find the best move.
 
@@ -140,9 +145,9 @@ class GeneticAlgorithm:
         Returns:
             int: The best move found by the algorithm.
         """
-        population = self.initialize_population(population_size)
+        population = self.initialize_population()
 
-        for _ in range(generations):
+        for _ in range(self.generations):
             fitness_scores = [
                 self.evaluate_fitness(chromosome, current_board)
                 for chromosome in population
@@ -150,14 +155,13 @@ class GeneticAlgorithm:
             best_chromosome = population[fitness_scores.index(max(fitness_scores))]
             new_population = [best_chromosome]
 
-            for _ in range(population_size - 1):
+            for _ in range(self.population - 1):
                 parent1 = random.choice(population)
                 parent2 = random.choice(population)
                 crossover_point = random.randint(1, len(parent1) - 1)
                 child = parent1[:crossover_point] + parent2[crossover_point:]
-                mutation_rate = 0.1
 
-                if random.uniform(0, 1) < mutation_rate:
+                if random.uniform(0, 1) < self.mutation_rate:
                     gene_to_mutate = random.randint(0, len(child) - 1)
                     child[gene_to_mutate] = random.choice(
                         [i for i in range(9) if current_board[i] == 0]
