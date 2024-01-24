@@ -21,7 +21,7 @@ You can use this code from both CLI and Script Environments.
 To play the Tic-Tac-Toe game from the command line, use the following command:
 
 ```bash
-python -m tictactoe
+python -m tictoctoe
 ```
 
 #### Command-Line Arguments
