@@ -44,9 +44,6 @@ class GeneticAlgorithm:
         """
         Initializes the population of chromosomes.
 
-        Args:
-            population_size (int): The size of the population.
-
         Returns:
             List[List[int]]: The initialized population of chromosomes.
         """
