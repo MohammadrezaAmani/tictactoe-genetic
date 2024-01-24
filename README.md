@@ -2,7 +2,7 @@
 
 **Introduction:**
 
-This project is a simple command-line implementation of the classic Tic Tac Toe game using Python([GUI](./tictoctoe/gui.py) version contains bugs).
+This project is a simple command-line implementation of the classic Tic Tac Toe game using Python. _(The [GUI](./tictoctoe/gui.py) version contains some minor bugs, that's why we don't use it and stick to the CLI version)_.
 
 **Table of Contents:**
 
