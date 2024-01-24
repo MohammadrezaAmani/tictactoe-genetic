@@ -1,3 +1,8 @@
+"""
+Maybe not today, maybe not tomorrow but one day ] will ... =')
+"""
+raise NotImplementedError
+
 import dearpygui.dearpygui as dpg
 
 from .genetic import GeneticAlgorithm
