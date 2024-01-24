@@ -37,13 +37,13 @@ python -m tictactoe
 ##### Play with AI
 
 ```bash
-python -m tictactoe -a
+python -m tictoctoe -a
 ```
 
 ##### Configure Game Parameters
 
 ```bash
-python -m tictactoe -p 30 -g 100 -m 0.05
+python -m tictoctoe -p 30 -g 100 -m 0.05
 ```
 
 ### From Python Code
