@@ -28,7 +28,7 @@ class TicTacToeGame:
             GeneticAlgorithm: The genetic algorithm used for opponent moves.
         """
         return self._genetic_algo
-    
+
     @genetic_algo.setter
     def genetic_algo(self, genetic_algo: GeneticAlgorithm) -> None:
         """
@@ -36,11 +36,9 @@ class TicTacToeGame:
             genetic_algo (GeneticAlgorithm): The genetic algorithm used for opponent moves.
         """
         if not isinstance(genetic_algo, GeneticAlgorithm):
-            raise TypeError(
-                Consts.GeneticAlgoTypeError % type(genetic_algo).__name__
-            )
+            raise TypeError(Consts.GeneticAlgoTypeError % type(genetic_algo).__name__)
         self._genetic_algo = genetic_algo
-        
+
     def print_board(self) -> None:
         """
         Prints the current state of the game board.

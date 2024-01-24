@@ -11,4 +11,6 @@ class Consts:
     YouWinMessage = "You win! Congratulations!"
     Xdelemeter = "-" * 8
     Ydelemeter = " | "
-    GeneticAlgoTypeError = "Genetic algorithm type must be a GeneticAlgorithm instance. not %s"
+    GeneticAlgoTypeError = (
+        "Genetic algorithm type must be a GeneticAlgorithm instance. not %s"
+    )
