@@ -79,8 +79,6 @@ The game follows standard Tic Tac Toe rules:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Certainly! Below is a Markdown documentation template for your `__main__.py` module:
-
 ## Author
 
 - Mohammadreza Amani
