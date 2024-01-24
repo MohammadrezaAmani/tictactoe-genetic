@@ -43,7 +43,7 @@ python -m tictoctoe -a
 ##### Configure Game Parameters
 
 ```bash
-python -m tictoctoe -p 30 -g 100 -m 0.05
+python -m tictoctoe -a -p 30 -g 100 -m 0.05
 ```
 
 ### From Python Code
