@@ -87,7 +87,7 @@ class TicTacToeGame:
             except ValueError:
                 print(Consts.InvalidInputMessage)
 
-    def play(self, with_ai: bool = True) -> None:
+    def play(self, with_ai: bool = False) -> None:
         """
         Starts the game loop.
         """
